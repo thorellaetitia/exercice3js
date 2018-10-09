@@ -1,3 +1,12 @@
 var userName = prompt('Entrez votre prénom');
-var exp = new RegExp("[a-zA-Z]*","g");
-alert('bonjour '+userName+" !");
+var regex=/^[a-zA-ZÀ-ÿ]+$/;
+
+if (!regex.test(userName)) {
+
+  alert('problème de saisie');
+
+} else {
+
+  alert('Bonjour'+userName+"!");
+
+}
